@@ -1,0 +1,4 @@
+Primary color: #1DB954
+Background color: #121212
+Text color: #FFFFFF
+Font: Inter, sans-serif
