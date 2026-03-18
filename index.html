@@ -3,16 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MusicStream — ye</title>
-        <link rel="stylesheet" href="css/style.css" />
+
+        <title>MusicStream — Ye</title>
+
+        <link rel="stylesheet" href="css/variables.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/footer.css" />
     </head>
 
-    <body>
-        <a href="#main" class="skip-link">Перейти к основному содержимому</a>
-
+    <body class="page">
         <header class="header">
             <div class="header__container">
-                <h1>MusicStream</h1>
+                <h1 class="header__logo">MusicStream</h1>
+
                 <nav>
                     <ul class="nav__list">
                         <li><a href="#">Главная</a></li>
@@ -21,109 +26,62 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
+
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </header>
 
-        <main id="main" class="main">
-            <article
-                class="album"
-                itemscope
-                itemtype="https://schema.org/MusicAlbum"
-            >
+        <main class="main">
+            <article class="album">
                 <header class="album__header">
-                    <h2 itemprop="name">ye</h2>
-                    <time datetime="2018-06-01" class="album__date">
-                        Дата релиза: 1 июня 2018
-                    </time>
+                    <h2 class="album__title">ye</h2>
+
+                    <p class="album__date">Дата релиза: 1 июня 2018</p>
                 </header>
 
-                <figure class="album__cover">
-                    <img
-                        src="images/ye-cover.jpg"
-                        alt="Обложка альбома ye Канье Уэста"
-                        itemprop="image"
-                    />
-                </figure>
+                <div class="album__cover">
+                    <img src="images/ye-cover.jpg" />
+                </div>
 
-                <section
-                    class="artist"
-                    itemprop="byArtist"
-                    itemscope
-                    itemtype="https://schema.org/MusicGroup"
-                >
-                    <h3>Исполнитель</h3>
-                    <p itemprop="name">Kanye West</p>
+                <section class="artist">
+                    <h3 class="artist__title">Исполнитель</h3>
 
-                    <img
-                        src="images/kanye.jpg"
-                        alt="Канье Уэст — американский рэпер и продюсер"
-                    />
+                    <p class="artist__name">Kanye West</p>
+
+                    <img src="images/kanye.jpg" />
                 </section>
 
                 <section class="tracks">
                     <h3>Список треков</h3>
 
-                    <ol class="tracks__list">
-                        <li
-                            class="tracks__item"
-                            itemprop="track"
-                            itemscope
-                            itemtype="https://schema.org/MusicRecording"
-                        >
-                            <h4 itemprop="name">I Thought About Killing You</h4>
-                            <meta itemprop="duration" content="PT4M34S" />
+                    <ul class="tracks__list">
+                        <li class="tracks__item">
+                            I Thought About Killing You
                         </li>
-
-                        <li
-                            class="tracks__item"
-                            itemprop="track"
-                            itemscope
-                            itemtype="https://schema.org/MusicRecording"
-                        >
-                            <h4 itemprop="name">Yikes</h4>
-                            <meta itemprop="duration" content="PT3M08S" />
-                        </li>
-
-                        <li
-                            class="tracks__item"
-                            itemprop="track"
-                            itemscope
-                            itemtype="https://schema.org/MusicRecording"
-                        >
-                            <h4 itemprop="name">All Mine</h4>
-                            <meta itemprop="duration" content="PT2M25S" />
-                        </li>
-
-                        <li
-                            class="tracks__item"
-                            itemprop="track"
-                            itemscope
-                            itemtype="https://schema.org/MusicRecording"
-                        >
-                            <h4 itemprop="name">Ghost Town</h4>
-                            <meta itemprop="duration" content="PT4M31S" />
-                        </li>
-                    </ol>
+                        <li class="tracks__item">Yikes</li>
+                        <li class="tracks__item">All Mine</li>
+                        <li class="tracks__item">Ghost Town</li>
+                    </ul>
                 </section>
             </article>
 
             <aside class="sidebar">
                 <h3>Другие альбомы</h3>
+
                 <ul>
-                    <li><a href="#">Graduation</a></li>
-                    <li><a href="#">My Beautiful Dark Twisted Fantasy</a></li>
-                    <li><a href="#">The Life of Pablo</a></li>
+                    <li>Graduation</li>
+                    <li>My Beautiful Dark Twisted Fantasy</li>
+                    <li>The Life of Pablo</li>
                 </ul>
             </aside>
         </main>
 
-        <footer
-            class="footer"
-            itemscope
-            itemtype="https://schema.org/Organization"
-        >
-            <p itemprop="name">MusicStream</p>
-            <p>© 2026 Все права защищены</p>
+        <footer class="footer">
+            <p>MusicStream &copy; 2026</p>
         </footer>
     </body>
 </html>

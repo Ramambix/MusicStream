@@ -1,58 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f0f0f;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: #1db954;
-}
-
-a:hover {
-    opacity: 0.8;
-}
-
-.skip-link {
-    position: absolute;
-    left: -999px;
-    top: 10px;
-    background: #1db954;
-    color: black;
-    padding: 8px 12px;
-    border-radius: 6px;
-}
-
-.skip-link:focus {
-    left: 10px;
-}
-
-.header {
-    background: #121212;
-    padding: 20px 40px;
-    border-bottom: 1px solid #222;
-}
-
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__list {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
 .main {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
@@ -60,7 +8,7 @@ a:hover {
 }
 
 .album {
-    background: #181818;
+    background: var(--color-block);
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -72,7 +20,7 @@ a:hover {
 }
 
 .album__date {
-    color: #aaa;
+    color: var(--color-text-secondary);
     font-size: 14px;
 }
 
@@ -80,7 +28,6 @@ a:hover {
     width: 60%;
     max-width: 450px;
     min-width: 250px;
-    display: block;
     margin: 20px auto;
     border-radius: 12px;
 }
@@ -88,7 +35,7 @@ a:hover {
 .artist {
     margin-top: 30px;
     padding: 20px;
-    background: #202020;
+    background: var(--color-block-light);
     border-radius: 12px;
 }
 
@@ -110,7 +57,7 @@ a:hover {
 
 .tracks__item {
     padding: 15px;
-    background: #202020;
+    background: var(--color-block-light);
     border-radius: 10px;
     margin-bottom: 12px;
     transition: 0.3s;
@@ -122,7 +69,7 @@ a:hover {
 }
 
 .sidebar {
-    background: #181818;
+    background: var(--color-block);
     padding: 25px;
     border-radius: 16px;
     height: fit-content;
@@ -137,17 +84,36 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    background: #121212;
-    border-top: 1px solid #222;
-    color: #aaa;
-}
-
 @media (max-width: 900px) {
     .main {
         grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .album {
+        padding: 20px;
+    }
+
+    .album__cover img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .artist {
+        text-align: center;
+    }
+
+    .artist img {
+        margin: 15px auto;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .tracks__item {
+        font-size: 16px;
+        padding: 12px;
     }
 }

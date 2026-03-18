@@ -1,0 +1,24 @@
+:root {
+    --color-bg: #0f0f0f;
+    --color-header: #121212;
+    --color-block: #181818;
+    --color-block-light: #202020;
+    --color-border: #222;
+
+    --color-accent: #1db954;
+
+    --color-text: #ffffff;
+    --color-text-secondary: #aaa;
+
+    --font-main: 'Segoe UI', sans-serif;
+
+    --spacing-xs: 10px;
+    --spacing-sm: 20px;
+    --spacing-md: 30px;
+    --spacing-lg: 40px;
+
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --breakpoint-tablet: 900px;
+}
